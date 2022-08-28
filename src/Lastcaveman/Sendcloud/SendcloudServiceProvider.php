@@ -1,7 +1,7 @@
 <?php
 /**
  */
-namespace Zjango\Sendcloud;
+namespace Lastcaveman\Sendcloud;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +19,7 @@ class SendcloudServiceProvider extends ServiceProvider
     {
         // $this->app['sendcloud'] = $this->app->share(
         //     function ($app) {
-        //         return new \Zjango\Sendcloud\Sendcloud();
+        //         return new \Lastcaveman\Sendcloud\Sendcloud();
         //     }
         // );
 
@@ -27,9 +27,9 @@ class SendcloudServiceProvider extends ServiceProvider
             function () {
                 $aliases = \Config::get('app.aliases');
 
-                if(empty($aliases['Zjango\SendcloudClass'])){
+                if(empty($aliases['Lastcaveman\SendcloudClass'])){
                     $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-                    $loader->alias('Zjango\SendcloudClass','Zjango\Sendcloud\Facades\SendcloudClass');
+                    $loader->alias('Lastcaveman\SendcloudClass','Lastcaveman\Sendcloud\Facades\SendcloudClass');
                 }
 
             }

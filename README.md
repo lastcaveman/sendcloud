@@ -14,20 +14,20 @@ Sendcloud::send('test@test.com','来自SendCloud的第一封邮件!',(string)(Vi
 
 Require this package in your `composer.json` and update composer. This will download the package.
 ```php
-"zjango/sendcloud":"dev-master"
+"lastcaveman/sendcloud":"dev-master"
 ```
 
 After updating composer, add the ServiceProvider to the providers array in `app/config/app.php`
 
 
 ```php
-'Zjango\Sendcloud\SendcloudServiceProvider',
+'Lastcaveman\Sendcloud\SendcloudServiceProvider',
 ```
 
 You can use the facade for shorter code. Add this to your aliases:
 
 ```php
-'Sendcloud' 		=> 'Zjango\Sendcloud\Facades\SendcloudClass',
+'Sendcloud' 		=> 'Lastcaveman\Sendcloud\Facades\SendcloudClass',
 ```
 Add config 
 

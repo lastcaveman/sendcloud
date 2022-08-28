@@ -3,8 +3,8 @@
     "description": "",
     "authors": [
         {
-            "name": "zjango",
-            "email": "zjango@icloud.com"
+            "name": "lastcaveman",
+            "email": "lastcaveman@icloud.com"
         }
     ],
     "require": {
@@ -12,7 +12,7 @@
     },
     "autoload": {
         "classmap": [
-            "src/Zjango"
+            "src/lastcaveman"
             ]
     },
     "minimum-stability": "stable"

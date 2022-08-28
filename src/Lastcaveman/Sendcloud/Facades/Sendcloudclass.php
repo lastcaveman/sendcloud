@@ -1,7 +1,7 @@
 <?php
 /**
  */
-namespace Zjango\Sendcloud\Facades;
+namespace Lastcaveman\Sendcloud\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

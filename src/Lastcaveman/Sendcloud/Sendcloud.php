@@ -1,5 +1,5 @@
 <?php
-namespace Zjango\Sendcloud;
+namespace Lastcaveman\Sendcloud;
 
 class Sendcloud{
 
