@@ -44,8 +44,8 @@ class Sendcloud{
         $sendcloud_config=\Config::get('mail.sendcloud');
         $ch = curl_init();
         $param=array(
-            'api_user' => $sendcloud_config['api_user'], # 使用api_user和api_key进行验证
-            'api_key' => $sendcloud_config['api_key'],
+            'apiUser' => $sendcloud_config['api_user'], # 使用api_user和api_key进行验证
+            'apiKey' => $sendcloud_config['api_key'],
             'from' => $sendcloud_config['from_addr'], # 发信人，用正确邮件地址替代
             'fromname' => $sendcloud_config['from_name'],
             'to' =>self::encodeEmails($to), # 收件人地址，用正确邮件地址替代，多个地址用';'分隔
@@ -74,7 +74,7 @@ class Sendcloud{
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-        curl_setopt($ch, CURLOPT_URL, 'http://sendcloud.sohu.com/webapi/mail.send.json');
+        curl_setopt($ch, CURLOPT_URL, 'https://api.sendcloud.net/apiv2/mail/send');
         curl_setopt($ch, CURLOPT_POSTFIELDS,$param);
 
         $result = curl_exec($ch);
